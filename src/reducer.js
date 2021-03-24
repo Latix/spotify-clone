@@ -7,7 +7,6 @@ export const initialState = {
 }
 
 const reducer = (state, action) => {
-    console.log(action);
 
     switch(action.type) {
         case 'SET_USER': 
@@ -24,6 +23,11 @@ const reducer = (state, action) => {
             return {
                 ...state, 
                 token: action.playlists
+            }
+        case 'SET_DISCOVER_WEEKLY': 
+            return {
+                ...state, 
+                token: action.discover_weekly
             }
         default:
             return state;
