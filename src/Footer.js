@@ -12,7 +12,11 @@ function Footer() {
     return (
         <div className="footer">
             <div className="footer__left">
-                <p>Album and song details</p>
+                <img className="footer__AlbumLogo" src="https://upload.wikimedia.org/wikipedia"/>
+                <div className="song__info">
+                    <h4>Yeah!</h4>
+                    <p>Usher</p>
+                </div>
             </div>
             <div className="footer__center">
                 <ShuffleOutlined className="footer__green" />
