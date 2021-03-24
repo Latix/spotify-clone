@@ -5,6 +5,9 @@ import SkipPreviousOutlined from "@material-ui/icons/SkipPreviousOutlined";
 import SkipNextOutlined from "@material-ui/icons/SkipNextOutlined";
 import ShuffleOutlined from "@material-ui/icons/ShuffleOutlined";
 import RepeatOutlined from "@material-ui/icons/RepeatOutlined";
+import { Grid, Slider } from '@material-ui/core';
+import PlaylistPlayOutlined from "@material-ui/icons/PlaylistPlayOutlined";
+import VolumeDownOutlinedIcon from '@material-ui/icons/VolumeDownOutlined';
 function Footer() {
     return (
         <div className="footer">
@@ -19,7 +22,17 @@ function Footer() {
                 <RepeatOutlined className="footer__icon" />
             </div>
             <div className="footer__right">
-                <p>Volume Controls</p>
+                <Grid container spacing={2}>
+                    <Grid item>
+                        <PlaylistPlayOutlined />
+                    </Grid>
+                    <Grid item>
+                        <VolumeDownOutlinedIcon />
+                    </Grid>
+                    <Grid item xs>
+                        <Slider aria-labelledby="continous-slider" />
+                    </Grid>
+                </Grid>
             </div>
         </div>
     )
